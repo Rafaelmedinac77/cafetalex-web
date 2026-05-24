@@ -891,3 +891,88 @@ img{
 .map-card{
   height:600px;
 }
+/* MENU MOVIL */
+
+.menu-toggle{
+  display:none;
+  background:none;
+  border:1px solid rgba(255,255,255,.35);
+  color:white;
+  font-size:1.7rem;
+  width:46px;
+  height:42px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+@media(max-width:900px){
+
+  .navbar{
+    padding:14px 22px;
+    align-items:center;
+  }
+
+  .brand img{
+    height:42px;
+  }
+
+  .menu-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .nav-button{
+    display:none;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,.94);
+    backdrop-filter:blur(10px);
+    display:none;
+    flex-direction:column;
+    gap:0;
+    padding:18px 22px 24px;
+    border-top:1px solid rgba(255,255,255,.12);
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    color:white;
+    padding:14px 0;
+    font-size:1rem;
+    border-bottom:1px solid rgba(255,255,255,.1);
+  }
+
+  .nav-links a:last-child{
+    border-bottom:none;
+  }
+
+  .hero{
+    padding-top:150px;
+  }
+
+  .hero-logo{
+    width:330px;
+  }
+
+  .hero h1{
+    font-size:clamp(2.4rem,11vw,3.4rem);
+  }
+
+  .hero-text{
+    font-size:1rem;
+  }
+}
